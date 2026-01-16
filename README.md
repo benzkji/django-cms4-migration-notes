@@ -5,6 +5,26 @@
 work on branch cms4  
 use https://github.com/django-cms/djangocms-4-migration - works!
 
+```
+pip install django-cms\>=4.1,\<5
+djangocms-text-ckeditor
+pip install djangocms-text-ckeditor
+pip install djangocms-versioning
+pip install djangocms-alias
+pip install git+https://github.com/django-cms/djangocms-4-migration
+
+INSTALLED_APPS = [
+    ...,
+    "djangocms_4_migration",
+    "djangocms_versioning",
+    "djangocms_alias",
+    ...,
+]
+CMS_CONFIRM_VERSION4 = True
+
+./manage.py cms4_migration
+```
+
 ### update outside cms placeholders
 
 -   https://docs.django-cms.org/en/latest/how_to/01-placeholders.html#
