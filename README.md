@@ -7,7 +7,7 @@ use https://github.com/django-cms/djangocms-4-migration - works!
 
 ```
 install
-django-cms\>=4.1,\<5
+django-cms>=4.1,<5
 djangocms-versioning
 djangocms-alias
 # djangocms-text-ckeditor
