@@ -21,6 +21,7 @@ INSTALLED_APPS = [
     ...,
 ]
 CMS_CONFIRM_VERSION4 = True
+CMS_TOOLBAR_URL_ENABLE = "edit"  # keep .com/?edit to login
 
 ./manage.py cms4_migration
 ```
