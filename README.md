@@ -6,11 +6,12 @@ work on branch cms4
 use https://github.com/django-cms/djangocms-4-migration - works!
 
 ```
-pip install django-cms\>=4.1,\<5
-# pip install djangocms-text-ckeditor
-pip install djangocms-versioning
-pip install djangocms-alias
-pip install git+https://github.com/django-cms/djangocms-4-migration
+install
+django-cms\>=4.1,\<5
+djangocms-versioning
+djangocms-alias
+# djangocms-text-ckeditor
+git+https://github.com/django-cms/djangocms-4-migration
 
 INSTALLED_APPS = [
     ...,
