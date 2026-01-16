@@ -2,8 +2,8 @@
 
 ### migrate core
 
-work on branch cms4
-used https://github.com/django-cms/djangocms-4-migration - works!
+work on branch cms4  
+use https://github.com/django-cms/djangocms-4-migration - works!
 
 ### update outside cms placeholders
 
@@ -15,4 +15,4 @@ used https://github.com/django-cms/djangocms-4-migration - works!
 
 ### current problems
 
--   remove "Vorschau" ?!!
+-   remove unnecessary"Vorschau/Preview" button ?!!
