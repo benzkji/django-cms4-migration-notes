@@ -97,15 +97,7 @@ for example, when trying to get a page's url:
 Page.objects.public().get(reverse_id="downloads").get_absolute_url()
 
 # after
-from djangocms_versioning.constants import PUBLISHED
-
-Page.objects.filter(
-    # this prevents url leaking, but might lead to broken links when in edit mode...
-    pagecontent_set__versions__state=PUBLISHED,
-)
-.distinct("id")
-.get(reverse_id="downloads")
-.get_absolute_url()
+Page.objects.get(reverse_id="downloads").get_absolute_url()
 ```
 
 ### oppiniated enhancements I want to establish
