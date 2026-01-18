@@ -1,5 +1,7 @@
 # django-cms4-migration-notes
 
+I'll try to write down any problems and resulting solutions/tips right in this README.
+
 ### some links first
 
 - django cms blog: upgrade encouragement :) https://www.django-cms.org/en/blog/2026/01/10/why-now-is-the-right-time-to-migrate-from-django-cms-3-11/
