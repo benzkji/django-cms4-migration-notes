@@ -8,6 +8,7 @@
 
 - ./manage.py cms page fix-tree
 - ./manage.py plugin page fix-tree
+- switch to djangocms-text if you use djangocms-text-ckeditor
 
 ### migrate core
 
