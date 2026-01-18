@@ -6,6 +6,8 @@
 
 ### prepare in old cms3 ecosystem
 
+- use latest django-cms 3.X, no out of date plugins or other dependencies
+- best to use django 4.2
 - ./manage.py cms page fix-tree
 - ./manage.py plugin page fix-tree
 - switch to djangocms-text if you use djangocms-text-ckeditor
