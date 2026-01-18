@@ -74,6 +74,9 @@ def update_ckeditor_link_pages_for_cms4(old_page, new_page):
 
 # actually migrate to new db structure
 ./manage.py cms4_migration
+
+# upgrade to Django 5.2 LTS
+
 ```
 
 ### update outside cms placeholders
