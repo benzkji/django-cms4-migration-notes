@@ -1,6 +1,6 @@
 # django-cms4-migration-notes
 
-### some links first :)
+### some links first
 
 - https://www.django-cms.org/en/blog/2026/01/10/why-now-is-the-right-time-to-migrate-from-django-cms-3-11/
 
