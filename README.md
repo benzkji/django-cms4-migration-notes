@@ -27,6 +27,8 @@ djangocms-versioning
 djangocms-alias
 git+https://github.com/django-cms/djangocms-4-migration
 
+# upgrade to Django 5.2 LTS as well, if possible right at this point
+
 # in settings, add them
 INSTALLED_APPS = [
     ...,
@@ -75,7 +77,7 @@ def update_ckeditor_link_pages_for_cms4(old_page, new_page):
 # actually migrate to new db structure
 ./manage.py cms4_migration
 
-# upgrade to Django 5.2 LTS
+
 
 ```
 
