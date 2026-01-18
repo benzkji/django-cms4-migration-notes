@@ -100,6 +100,7 @@ Page.objects.filter(
             ).get_absolute_url()
 ```
 
-### current problems
+### oppiniated enhancements I want to establish
 
--   remove unnecessary"Vorschau/Preview" button ?!!
+- change "create version" to "edit", always (VersioningToolbar)
+- remove "preview" button, as it's unneeded and causing confusion (VersioningToolbar)
