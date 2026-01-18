@@ -1,5 +1,14 @@
 # django-cms4-migration-notes
 
+### some links first :)
+
+- https://www.django-cms.org/en/blog/2026/01/10/why-now-is-the-right-time-to-migrate-from-django-cms-3-11/
+
+### prepare in old cms3 ecosystem
+
+- ./manage.py cms page fix-tree
+- ./manage.py plugin page fix-tree
+
 ### migrate core
 
 work on branch cms4  
