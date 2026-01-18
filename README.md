@@ -23,6 +23,12 @@ INSTALLED_APPS = [
 CMS_CONFIRM_VERSION4 = True
 CMS_TOOLBAR_URL_ENABLE = "edit"  # keep .com/?edit to login
 
+# if you stored page ids somewhere, but not as FK or m2m (as django-ckeditor-link does, in html)
+# you'll need to update page ids with
+CMS_MIGRATION_PROCESS_PAGE_REFERENCES = "mymodule.myfunction2" 
+
+# example to follow
+
 ./manage.py cms4_migration
 ```
 
