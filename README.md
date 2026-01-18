@@ -100,9 +100,12 @@ Page.objects.public().get(reverse_id="downloads").get_absolute_url()
 from djangocms_versioning.constants import PUBLISHED
 
 Page.objects.filter(
-                reverse_id=my_rev_id
-                pagecontent_set__versions__state=PUBLISHED,
-            ).get_absolute_url()
+    # this prevents url leaking, but might lead to broken links when in edit mode...
+    pagecontent_set__versions__state=PUBLISHED,
+)
+.distinct("id")
+.get(reverse_id="downloads")
+.get_absolute_url()
 ```
 
 ### oppiniated enhancements I want to establish
