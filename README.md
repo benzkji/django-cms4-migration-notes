@@ -2,7 +2,8 @@
 
 ### some links first
 
-- https://www.django-cms.org/en/blog/2026/01/10/why-now-is-the-right-time-to-migrate-from-django-cms-3-11/
+- django cms blog: upgrade encouragement :) https://www.django-cms.org/en/blog/2026/01/10/why-now-is-the-right-time-to-migrate-from-django-cms-3-11/
+- django cms blog: upgrade to 4.1 story https://www.django-cms.org/en/blog/2025/03/02/how-i-successfully-upgraded-a-legacy-django-cms-project-to-4-1-4/
 
 ### prepare in old cms3 ecosystem
 
