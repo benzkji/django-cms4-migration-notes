@@ -16,13 +16,13 @@ work on branch cms4
 use https://github.com/django-cms/djangocms-4-migration - works!
 
 ```
-install
+# install new packages
 django-cms>=4.1,<5
 djangocms-versioning
 djangocms-alias
-# djangocms-text-ckeditor
 git+https://github.com/django-cms/djangocms-4-migration
 
+# in settings, add them
 INSTALLED_APPS = [
     ...,
     "djangocms_4_migration",
@@ -30,6 +30,7 @@ INSTALLED_APPS = [
     "djangocms_alias",
     ...,
 ]
+# some more settings
 CMS_CONFIRM_VERSION4 = True
 CMS_TOOLBAR_URL_ENABLE = "edit"  # keep .com/?edit to login
 
@@ -37,8 +38,36 @@ CMS_TOOLBAR_URL_ENABLE = "edit"  # keep .com/?edit to login
 # you'll need to update page ids with
 CMS_MIGRATION_PROCESS_PAGE_REFERENCES = "mymodule.myfunction2" 
 
-# example to follow
+# example for page reference function, when using django-ckeditor-link
+def update_ckeditor_link_pages_for_cms4(old_page, new_page):
+    print("--old page > new page hook -------------------------")
+    print(new_page.get_absolute_url())
+    for model in apps.get_models():
+        for field in model._meta.get_fields():
+            # Skip relational reverse fields if you do not want them
+            if not hasattr(field, "attname"):
+                continue
 
+            if not isinstance(field, RichTextField):
+                continue  # filter out RichTextFields
+
+            # Your logic here
+            kwargs = {f"{field.name}__contains": f'data-cms_page="{old_page.id}"'}
+            to_update = model.objects.filter(**kwargs)
+            if to_update.count():
+                print(
+                    f"updating {model.__name__}.{field.name} -> {field.__class__.__name__}"
+                )
+                for obj in to_update:
+                    text = getattr(obj, field.name)
+                    text = text.replace(
+                        f'data-cms_page="{old_page.id}"',
+                        f'data-cms_page="{new_page.id}"',
+                    )
+                    setattr(obj, field.name, text)
+                    obj.save()
+
+# actually migrate to new db structure
 ./manage.py cms4_migration
 ```
 
