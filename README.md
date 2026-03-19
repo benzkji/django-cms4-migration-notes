@@ -83,13 +83,17 @@ def update_ckeditor_link_pages_for_cms4(old_page, new_page):
 
 ```
 
-### update outside cms placeholders
+### frontend editing / outside cms placeholders
 
 -   https://docs.django-cms.org/en/latest/how_to/01-placeholders.html#
 -   makemigrations, migrate, after new field + property are there
 -   be careful with AutoSlugMixin, when editing objects! (unwanted 301s)
 -   page_title not shown on detail pages: https://github.com/django-cms/django-cms/issues/8427
 -   no modal editing/edit mode in overviews/apphooks: https://github.com/django-cms/django-cms/issues/7712#issuecomment-1844845602
+
+### other apps
+
+- some apps need `./manage.py create_versions --userid=id` to have initial versions created
 
 ### replace Page.public()
 
