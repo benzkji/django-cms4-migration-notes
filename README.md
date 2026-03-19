@@ -25,6 +25,7 @@ use https://github.com/django-cms/djangocms-4-migration - works!
 django-cms>=4.1,<5
 djangocms-versioning
 djangocms-alias
+djangocms-text-ckeditor  # if you use it already, otherwise skip
 git+https://github.com/django-cms/djangocms-4-migration
 
 # upgrade to Django 5.2 LTS as well, if possible right at this point
