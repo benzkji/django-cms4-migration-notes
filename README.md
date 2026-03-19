@@ -41,6 +41,7 @@ INSTALLED_APPS = [
 # some more settings
 CMS_CONFIRM_VERSION4 = True
 CMS_TOOLBAR_URL_ENABLE = "edit"  # keep .com/?edit to login
+CMS_MIGRATION_USER_ID = <user id>  # for alias creation
 
 # if you stored page ids somewhere, but not as FK or m2m (as django-ckeditor-link does, in html)
 # you'll need to update page ids manually. old way stored draft page id, new way uses "old published".
