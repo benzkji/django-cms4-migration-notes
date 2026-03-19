@@ -90,6 +90,7 @@ def update_ckeditor_link_pages_for_cms4(old_page, new_page):
 -   be careful with AutoSlugMixin, when editing objects! (unwanted 301s)
 -   page_title not shown on detail pages: https://github.com/django-cms/django-cms/issues/8427
 -   no modal editing/edit mode in overviews/apphooks: https://github.com/django-cms/django-cms/issues/7712#issuecomment-1844845602
+-   how to add aliases/static placeholders?
 
 ### other apps
 
