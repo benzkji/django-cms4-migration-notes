@@ -57,12 +57,22 @@ def update_ckeditor_link_pages_for_cms4(old_page, new_page):
             if not hasattr(field, "attname"):
                 continue
 
-            if not isinstance(field, RichTextField):
+            richtext_fields = ["RichTextField", "CharField", "TextField"]
+            if field.__class__.__name__ not in richtext_fields:
                 continue  # filter out RichTextFields
 
             # Your logic here
             kwargs = {f"{field.name}__contains": f'data-cms_page="{old_page.id}"'}
             to_update = model.objects.filter(**kwargs)
+
+            # protect against not existing tables!
+            try:
+                to_update.count()
+            except (UndefinedTable, ProgrammingError) as e:
+                print(f"errro, undefined table: {model}")
+                continue
+
+            # do it
             if to_update.count():
                 print(
                     f"updating {model.__name__}.{field.name} -> {field.__class__.__name__}"
