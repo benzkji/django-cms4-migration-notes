@@ -95,6 +95,7 @@ def update_ckeditor_link_pages_for_cms4(old_page, new_page):
 
 ### frontend editing / outside cms placeholders
 
+-   https://docs.django-cms.org/en/latest/upgrade/4.0.html#placeholder-relations
 -   https://docs.django-cms.org/en/latest/how_to/01-placeholders.html#
 -   makemigrations, migrate, after new field + property are there
 -   be careful with AutoSlugMixin, when editing objects! (unwanted 301s)
